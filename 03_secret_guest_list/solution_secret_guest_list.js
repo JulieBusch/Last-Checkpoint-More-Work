@@ -7,7 +7,7 @@ function guestListFns(arr, code){
 				if(codeGuess===code){
 					return name;
 				} else {
-					return "Secret-Code: Invalid"
+					return "Secret-Code: Invalid";
 				}
 			});
 		}

@@ -8,10 +8,15 @@ Laptop.prototype.checkSpecs = function(){
 };
 
 function Macbook(year, gigs, color){
-	Laptop.call(this, year, gigs);
+	Laptop.apply(this, [year, gigs]);
 	this.color = color;
 }
 
-function extendWithObjectCreate(laptop, prototype){
+function extendWithObjectCreate(comp1, comp2){
+	comp1.prototype = Object.create(comp2.prototype);
 	
+}
+
+function extendWithNewKeyword(comp1, comp2){
+	comp1.prototype = new comp2;
 }

@@ -13,7 +13,7 @@ function reduceRightRecursive(arr, start, func){
 	if (arr.length===1){
 		return func(current, arr[0]);
 	} else {
-		current += reduceRightRecursive(arr.slice(1), current, func);
+		current += reduceRightRecursive(arr.slice(0, -1), arr[arr.length-1], func);
 	}
 
 	return current;
